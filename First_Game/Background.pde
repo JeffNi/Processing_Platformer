@@ -20,7 +20,7 @@ class Background
 
   void hill()
   {
-    if (id == 0)
+    if (id == 0) //Hills 
     {
       dif1 = xPos[1] - xPos[0];
       dif2 = xPos[2] - xPos[1];
@@ -39,8 +39,9 @@ class Background
         xPos[1] = xPos[2] - dif2;
         xPos[0] = xPos[1] - dif1;
       }
+      //Draws shape
       triangle(xPos[0] - x/parallax, yPos[0], xPos[1] - x/parallax, yPos[1], xPos[2] - x/parallax, yPos[2]);
-    } else if (id == 1)
+    } else if (id == 1) //Cave background
     {
       if (((xPos[0] - x) < 1210) || ((xPos[0] - x + xPos[1]) > -10))
       {

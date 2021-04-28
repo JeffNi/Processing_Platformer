@@ -58,6 +58,7 @@ void mouseClicked()
       {
       }
     }
+    //Allows players to scroll through unlocked designs in customization menu
     switch(colId) {
     case 0:
       playerColor[0] = 255;

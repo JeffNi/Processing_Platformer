@@ -22,6 +22,7 @@ class Warp
   }
   
   void teleport () {
+    //If player touches warp they are teleported and the level is changed
     subChange = false;
     if ((625 > (xPos - x)) && (575 < (xPos - x + wid)))
     {

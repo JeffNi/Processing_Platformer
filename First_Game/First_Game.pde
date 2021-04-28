@@ -178,6 +178,7 @@ void draw()
     }
   }
   if (scene == 4) {
+    //Draws GUI
     background(0);
     fill(255);
     triangle(600, 400, 600, 460, 550, 430);
@@ -185,6 +186,7 @@ void draw()
     triangle(600, 550, 600, 610, 550, 580);
     triangle(900, 550, 900, 610, 950, 580);
     fill(0, 255, 0);
+    //Mouse hover changes color of triangle
     if (550 < mouseX && mouseX < 600) {
       if (400 < mouseY && mouseY < 460) 
       {
@@ -203,6 +205,7 @@ void draw()
         triangle(900, 550, 900, 610, 950, 580);
       }
     }
+    //Displays the color that the player is switching to
     stroke(playerColor[4], playerColor[5], playerColor[6]);
     fill(playerColor[0], playerColor[1], playerColor[2], playerColor[3]);
     rect(575, 200, 50, 50);
@@ -232,6 +235,7 @@ void draw()
       x = 0;
       y = 400;
     }
+    //Creates objects for main level
     if (start == true || (subChange == true && subLvl == 1))
     {
       hillAmt = 5;
@@ -285,6 +289,7 @@ void draw()
       //Warp zones
       warp[0] = new Warp(6500, 800, 800, 0, 400, 2, 1);
     }
+    //Creats objects for sublevel
     if (subLvl == 2 && subChange == true)
     {
       hillAmt = 0;

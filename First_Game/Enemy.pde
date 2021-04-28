@@ -1,3 +1,4 @@
+//This class includes all interactable objects, not just enemies
 class Enemy
 {
   int id;
@@ -20,10 +21,12 @@ class Enemy
 
   void display() 
   {
+    //Draws when on screen
     if (((xPos - x) < 1210) || ((xPos - x + 50) > -10)) 
     {
       wid = 50;
       trueX = xPos - x;
+      //Custom color unlockable
       if (id == 0) 
       {
         switch(extra) {
@@ -40,6 +43,7 @@ class Enemy
         strokeWeight(2);
         circle(trueX, yPos, wid);
       }
+      //Standard red baddie
       if (id == 1) 
       {
         if (start)
@@ -50,6 +54,7 @@ class Enemy
         trueX = xPos - x + radius * sin(movement);
         image(baddie, trueX, yPos, wid, wid);
       }
+      //Feather powerup
       if (id == 2)
       {
         image(feather, trueX, yPos, 50, 50);
@@ -57,6 +62,7 @@ class Enemy
     }
   }
   void enemyHit()
+  //Damages player and provides temporary invincibility when hit
   {
     if ((625 > trueX) && (575 < (trueX + wid)) && invincibleTime <= 0 && ((y + 50) > yPos) && (y < (yPos + wid)))
     {
